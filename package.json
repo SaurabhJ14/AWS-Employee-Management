@@ -1,0 +1,13 @@
+{
+  "name": "aws-assignment-1",
+  "private": true,
+  "scripts": {
+    "predev": "powershell -ExecutionPolicy Bypass -File ./clear-ports.ps1",
+    "dev": "concurrently \"npm --prefix backend run dev\" \"npm --prefix frontend run dev\"",
+    "start:backend": "npm --prefix backend start",
+    "start:frontend": "npm --prefix frontend run dev -- --host 0.0.0.0 --port 3000"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.2"
+  }
+}
